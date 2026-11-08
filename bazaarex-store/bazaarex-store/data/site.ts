@@ -10,7 +10,7 @@ export const siteConfig = {
     "BAZAAREX is a modern clothing store for shirts, knitwear, trousers and jackets in honest fabrics. Browse the collection and order through WhatsApp.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   /** International format, digits only. Set NEXT_PUBLIC_WHATSAPP_NUMBER in .env.local. */
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "919999999999",
+  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "917700868600",
   announcement:
     "Order on WhatsApp. We confirm size, stock and delivery with you directly.",
   contact: {
@@ -20,7 +20,7 @@ export const siteConfig = {
     hours: "Open daily, 10:00 am to 9:00 pm",
   },
   socials: {
-    instagram: "https://instagram.com/your-store-handle",
+    instagram: "https://www.instagram.com/socio.productions?vrfl=cjhpNm1jZnlkbmls",
     facebook: "https://facebook.com/your-store-page",
   },
   nav: [
