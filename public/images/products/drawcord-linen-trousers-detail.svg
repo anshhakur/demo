@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+<defs>
+<filter id="shadow" x="-25%" y="-15%" width="150%" height="145%">
+  <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#24231F" flood-opacity=".2"/>
+</filter>
+<radialGradient id="light" cx="50%" cy="38%" r="75%">
+  <stop offset="0" stop-color="#FFFFFF" stop-opacity=".55"/>
+  <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+</radialGradient>
+
+<linearGradient id="d0-g" x1="0" y1="0" x2="1" y2="0.3">
+  <stop offset="0" stop-color="#EBE2D0"/><stop offset="1" stop-color="#CDBFA5"/>
+</linearGradient>
+<pattern id="d0-weave" width="6" height="6" patternUnits="userSpaceOnUse">
+  <path d="M0 3H6" stroke="#CDBFA5" stroke-opacity=".14" stroke-width="1"/>
+</pattern>
+<pattern id="d0-rib" width="9" height="9" patternUnits="userSpaceOnUse">
+  <path d="M4.5 0V9" stroke="#CDBFA5" stroke-opacity=".45" stroke-width="3"/>
+</pattern>
+</defs>
+<rect width="800" height="1000" fill="#E4DBCB"/>
+
+<rect width="800" height="1000" fill="url(#light)"/>
+<g transform="translate(400 520) scale(2.15) translate(-400 -290)"><path d="M270 160 L530 160 L568 305 L598 880 L446 880 L400 425 L354 880 L202 880 L232 305 Z" fill="url(#d0-g)"/><path d="M270 160 L530 160 L568 305 L598 880 L446 880 L400 425 L354 880 L202 880 L232 305 Z" fill="url(#d0-weave)"/><path d="M270 160 L530 160 L568 305 L598 880 L446 880 L400 425 L354 880 L202 880 L232 305 Z" stroke="#CDBFA5" stroke-opacity=".55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M300 330 Q320 600 286 860" stroke="#CDBFA5" stroke-opacity=".12" stroke-width="22" fill="none" stroke-linecap="round"/><path d="M500 330 Q480 600 514 860" stroke="#CDBFA5" stroke-opacity=".12" stroke-width="22" fill="none" stroke-linecap="round"/><path d="M270 160 L530 160 L534 200 L266 200 Z" fill="#CDBFA5" fill-opacity=".4" stroke="#CDBFA5" stroke-opacity=".6" stroke-width="2.5" stroke-linejoin="round"/><path d="M400 200 V425" stroke="#CDBFA5" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><circle cx="400" cy="180" r="7" fill="#EBE2D0" stroke="#CDBFA5" stroke-opacity=".7" stroke-width="2"/><path d="M266 230 Q310 260 322 330" stroke="#CDBFA5" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M534 230 Q490 260 478 330" stroke="#CDBFA5" stroke-opacity=".55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M300 440 L274 870 M500 440 L526 870" stroke="#CDBFA5" stroke-opacity=".3" stroke-width="2" fill="none"/></g>
+</svg>
