@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import type { ChangeEvent, FormEvent } from "react";
 import Link from "next/link";
 import { createClient } from "@supabase/supabase-js";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import { ImagePlus, Trash2, Video, X } from "lucide-react";
 import { buttonStyles } from "@/components/ui/Button";
 import { categories } from "@/data/categories";
@@ -13,12 +14,6 @@ import { cn } from "@/lib/utils";
 import type { Product } from "@/types";
 
 const MEDIA_BUCKET = "media";
-
-/** Browser client used only to send files to Supabase Storage with a one-time signed URL. */
-function makeClient(url: string, anonKey: string) {
-  return createClient(url, anonKey, { auth: { persistSession: false, autoRefreshToken: false } });
-}
-type StorageClient = ReturnType<typeof makeClient>;
 const MAX_VIDEO_MB = 50;
 
 interface AdminDashboardProps {
@@ -126,7 +121,7 @@ export function AdminDashboard({
     setVideo(file);
   };
 
-  const uploadFile = async (file: File, supabase: StorageClient): Promise<string> => {
+  const uploadFile = async (file: File, supabase: SupabaseClient): Promise<string> => {
     const response = await fetch("/api/admin/upload-url", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -157,7 +152,9 @@ export function AdminDashboard({
     }
     setBusy(true);
     try {
-      const supabase = makeClient(supabaseUrl, supabaseAnonKey);
+      const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+        auth: { persistSession: false, autoRefreshToken: false },
+      });
 
       const uploaded: Array<{ src: string; alt: string }> = [];
       for (let index = 0; index < images.length; index += 1) {
